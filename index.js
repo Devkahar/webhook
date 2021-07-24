@@ -6,9 +6,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.post('/api/gitWebhook',(req, res) => {
-    console.log(req);
+    console.log("data Recived",req.body);
 
-    res.send({message: 'Hey We recived an event'});
+    res.json({status: "ok"});
 });
 
 app.get('/api',(req, res) => {
